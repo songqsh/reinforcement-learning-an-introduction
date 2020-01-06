@@ -90,6 +90,7 @@ def compute_state_value(in_place=False):
 def figure_4_1():
     values, sync_iteration = compute_state_value(in_place=False)
     _, asycn_iteration = compute_state_value(in_place=True)
+    print(np.round(values, decimals=2))
     draw_image(np.round(values, decimals=2))
     print('In-place: %d iterations' % (asycn_iteration))
     print('Synchronous: %d iterations' % (sync_iteration))
